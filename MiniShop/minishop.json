@@ -1,0 +1,12 @@
+{
+  "BindingOptions": [
+    {
+      "Port": 8080,
+      "Address": "127.0.0.1"
+    }
+  ],
+  "HostOptions": [],
+  "FeatureOptions": {
+    "MaxRequestBodySize": 10000000000
+  }
+}

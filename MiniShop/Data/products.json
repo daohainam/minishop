@@ -1,0 +1,92 @@
+{
+  "Products": [
+    {
+      "Id": 1,
+      "Name": "iPhone 15 Pro Max 256 GB",
+      "Description": "",
+      "Price": 1199,
+      "NormalPrice": 1199,
+      "Rating": 4,
+      "CategoryId": 1,
+      "VendorId": 1,
+      "ImageUrl": ""
+    },
+    {
+      "Id": 2,
+      "Name": "iPhone 15 Pro Max 512 GB",
+      "Description": "",
+      "Price": 1399,
+      "NormalPrice": 1399,
+      "Rating": 4,
+      "CategoryId": 1,
+      "VendorId": 1,
+      "ImageUrl": ""
+    },
+    {
+      "Id": 3,
+      "Name": "AirPods (3rd generation)",
+      "Description": "",
+      "Price": 169,
+      "NormalPrice": 199,
+      "Rating": 3,
+      "CategoryId": 1,
+      "VendorId": 1,
+      "ImageUrl": ""
+    },
+    {
+      "Id": 4,
+      "Name": "Watch Series 9",
+      "Description": "",
+      "Price": 399,
+      "NormalPrice": 399,
+      "Rating": 4,
+      "CategoryId": 1,
+      "VendorId": 1,
+      "ImageUrl": ""
+    },
+    {
+      "Id": 5,
+      "Name": "Watch Series 9 Stainless Steel",
+      "Description": "",
+      "Price": 699,
+      "NormalPrice": 799,
+      "Rating": 5,
+      "CategoryId": 1,
+      "VendorId": 1,
+      "ImageUrl": ""
+    },
+    {
+      "Id": 6,
+      "Name": "MacBook Pro 14-inch 8-core CPU",
+      "Description": "",
+      "Price": 1599,
+      "NormalPrice": 1599,
+      "Rating": 4,
+      "CategoryId": 1,
+      "VendorId": 1,
+      "ImageUrl": ""
+    },
+    {
+      "Id": 7,
+      "Name": "MacBook Pro 14-inch M3 Max",
+      "Description": "",
+      "Price": 3199,
+      "NormalPrice": 3199,
+      "Rating": 5,
+      "CategoryId": 1,
+      "VendorId": 1,
+      "ImageUrl": ""
+    },
+    {
+      "Id": 8,
+      "Name": "AirTag",
+      "Description": "",
+      "Price": 29,
+      "NormalPrice": 39,
+      "Rating": 3,
+      "CategoryId": 1,
+      "VendorId": 1,
+      "ImageUrl": ""
+    }
+  ]
+}
