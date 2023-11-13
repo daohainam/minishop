@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MiniWebServer.Controllers
+namespace MiniShop.Controllers
 {
     public class HomeController: Controller
     {
