@@ -1,27 +1,24 @@
-﻿using MiniWebServer.Configuration;
-using MiniWebServer.Server.Abstractions;
-using MiniWebServer.Server;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using MiniWebServer.HttpParser.Http11;
-using MiniWebServer.MiniApp.Builders;
-using MiniWebServer.MiniApp;
-using MiniWebServer.MiniWebServer.MimeMapping;
-using MiniWebServer.Server.Abstractions.Parsers.Http11;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Configuration;
+using MiniShop.Adapter;
+using MiniShop.Models;
+using MiniShop.Repository;
+using MiniShop.Repository.InMemory;
+using MiniShop.UseCase;
+using MiniWebServer.Authentication;
+using MiniWebServer.Configuration;
+using MiniWebServer.HttpParser.Http11;
+using MiniWebServer.HttpsRedirection;
+using MiniWebServer.MiniApp;
+using MiniWebServer.MiniApp.Builders;
+using MiniWebServer.MiniWebServer.MimeMapping;
+using MiniWebServer.Server;
+using MiniWebServer.Server.Abstractions;
+using MiniWebServer.Server.Abstractions.Parsers.Http11;
 using MiniWebServer.Session;
 using MiniWebServer.StaticFiles;
-using System.Text;
-using MiniWebServer.HttpsRedirection;
-using MiniWebServer.Authentication;
-using MiniWebServer.Authorization;
 using System.Text.Json;
-using MiniShop.Models;
-using MiniShop.Entity;
-using MiniShop.Repository.InMemory;
-using MiniShop.Repository;
-using MiniShop.UseCase;
-using MiniShop.Adapter;
 
 namespace MiniShop
 {
@@ -38,7 +35,9 @@ namespace MiniShop
             ServerOptions serverOptions = config.Get<ServerOptions>() ?? new ServerOptions();
             serverBuilder = serverBuilder
                 .UseOptions(serverOptions);
+
             ConfigureServerServices(serverBuilder.Services);
+            SetupRepositories(serverBuilder.Services);
 
             IMiniApp app = BuildApp(serverBuilder.Services, 0); // or server.CreateAppBuilder(); ?
             app = MapRoutes(app);
@@ -52,8 +51,6 @@ namespace MiniShop
             });
 
             serverBuilder.AddHost(string.Empty, app);
-
-            SetupRepositories(serverBuilder.Services);
 
             var server = serverBuilder.Build();
             server.Start();
@@ -104,6 +101,9 @@ namespace MiniShop
             services.AddTransient<IHttpComponentParser, ByteSequenceHttpParser>();
             services.AddTransient<IProtocolHandlerFactory, ProtocolHandlerFactory>();
             services.AddSingleton<IMimeTypeMapping>(StaticMimeMapping.Instance);
+
+            services.AddMvcService();
+            services.AddSessionService();
         }
 
         private static void SetupRepositories(IServiceCollection services)

@@ -14,9 +14,9 @@
 		<PackageReference Include="MiniWebServer.Authentication" Version="0.3.1" />
 		<PackageReference Include="MiniWebServer.Authorization" Version="0.3.1" />
 		<PackageReference Include="MiniWebServer.HttpsRedirection" Version="0.3.1" />
-		<PackageReference Include="MiniWebServer.Mvc" Version="0.3.1" />
-		<PackageReference Include="MiniWebServer.Server" Version="0.3.1" />
-		<PackageReference Include="MiniWebServer.Session" Version="0.3.1" />
+		<PackageReference Include="MiniWebServer.Mvc" Version="0.3.2" />
+		<PackageReference Include="MiniWebServer.Server" Version="0.3.2" />
+		<PackageReference Include="MiniWebServer.Session" Version="0.3.2" />
 		<PackageReference Include="MiniWebServer.StaticFiles" Version="0.3.1" />
 	</ItemGroup>
 
