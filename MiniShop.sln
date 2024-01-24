@@ -1,19 +1,19 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniShop", "MiniShop\MiniShop.csproj", "{8EDB727C-507B-4EC6-A752-3F00EEF90E4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniShop.Entity", "MiniShop.Entity\MiniShop.Entity.csproj", "{E9207943-22B0-4AF0-80BF-E80EB0547B77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniShop.Entity", "MiniShop.Entity\MiniShop.Entity.csproj", "{E9207943-22B0-4AF0-80BF-E80EB0547B77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniShop.UseCase", "MiniShop.UseCase\MiniShop.UseCase.csproj", "{758B0333-D498-4E2A-8AE1-0FA3A8EE266A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniShop.UseCase", "MiniShop.UseCase\MiniShop.UseCase.csproj", "{758B0333-D498-4E2A-8AE1-0FA3A8EE266A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniShop.Adapter", "MiniShop.Adapter\MiniShop.Adapter.csproj", "{19950926-62E7-44AB-B7DC-A08651AF098B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniShop.Repository", "MiniShop.Repository\MiniShop.Repository.csproj", "{66D06DA7-F5A5-44DC-8E72-CD393909C417}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniShop.Repository", "MiniShop.Repository\MiniShop.Repository.csproj", "{66D06DA7-F5A5-44DC-8E72-CD393909C417}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniShop.Repository.InMemory", "MiniShop.Repository.InMemory\MiniShop.Repository.InMemory.csproj", "{852FDCEF-DC80-4CF3-AFE8-67663EB6B0A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniShop.Repository.InMemory", "MiniShop.Repository.InMemory\MiniShop.Repository.InMemory.csproj", "{852FDCEF-DC80-4CF3-AFE8-67663EB6B0A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
