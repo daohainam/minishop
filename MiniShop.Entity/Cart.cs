@@ -8,6 +8,27 @@ namespace MiniShop.Entity
 {
     public class Cart: BaseEntity
     {
-        public IDictionary<int, CartItem> Items = new Dictionary<int, CartItem>();
+        private IDictionary<int, CartItem> items = new Dictionary<int, CartItem>();
+
+        public void Add(int productId, int quantity)
+        {
+            if (items.TryGetValue(productId, out var item)) { 
+                item.Quantity += quantity;
+            }
+            else
+            {
+                items.Add(productId, new CartItem()
+                {
+                    ProductId = productId,
+                    Quantity = quantity
+                });
+            }
+        }
+
+        public IEnumerable<CartItem> Items { 
+            get { 
+                return items.Values;
+            } 
+        }
     }
 }

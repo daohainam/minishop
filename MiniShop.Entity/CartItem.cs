@@ -10,7 +10,5 @@ namespace MiniShop.Entity
     {
         public required int ProductId { get; set; }
         public required int Quantity { get; set; }
-        public required double UnitPrice { get; set; }
-        public double TotalPrice => Quantity * UnitPrice;
     }
 }
